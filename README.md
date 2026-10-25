@@ -1,7 +1,15 @@
 # armenianheritagecenter.org
 
-Fundraising site for the Armenian Community Center and School in Redmond, WA.
+Fundraising site for the Armenian Community Center in Redmond, WA.
 Plain HTML and CSS, hosted on GitHub Pages. No build step.
+
+## Wording
+
+Describe the building as a community center. For the first floor, say
+"learning spaces" or "learning rooms for up to 130 people", and describe the
+programs: language classes for children in Armenian and other languages spoken
+across the Redmond community, plus clubs for chess, arts and crafts, music and
+computers.
 
 ## Pages
 

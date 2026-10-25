@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Donate · Armenian Community Center in Redmond</title>
-  <meta name="description" content="Become a Founding Family: $100 a month for three years helps build the new Armenian Community Center and School in Redmond, WA.">
+  <meta name="description" content="Give to the new Armenian Community Center and School in Redmond, WA. Become a Founding Family with $100 a month for three years.">
   <link rel="canonical" href="https://armenianheritagecenter.org/donate.html">
   <meta name="theme-color" content="#1b2a41">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Become a Founding Family">
+  <meta property="og:title" content="Donate to the Armenian Community Center">
   <meta property="og:description" content="$100 a month for three years, about $3.30 a day, builds a home for the next generation of our community.">
   <meta property="og:url" content="https://armenianheritagecenter.org/donate.html">
   <meta property="og:image" content="https://armenianheritagecenter.org/assets/img/og-image.jpg">
@@ -18,9 +18,9 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/pledge.js" defer></script>
+  <script src="assets/js/give.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -35,275 +35,161 @@
         </span>
       </a>
       <nav class="site-nav" aria-label="Main">
-        <a class="nav-link" href="./#project">The project</a>
         <a class="nav-link" href="./#plan">The plan</a>
+        <a class="nav-link" href="./#project">The building</a>
         <a class="nav-link" href="./#transparency">Transparency</a>
-        <a class="btn btn-primary" href="donate.html" aria-current="page">Donate</a>
+        <a class="nav-link" href="./#faq">FAQ</a>
       </nav>
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" class="pay">
+    <div class="wrap pay-grid">
 
-    <!-- Hero -->
-    <section class="donate-hero">
-      <div class="wrap">
-        <div class="donate-hero-grid">
-          <div class="donate-hero-copy">
-            <p class="eyebrow">Donate</p>
-            <h1>Become a Founding Family</h1>
-            <p class="lede">We're looking for 200 families and individuals to give $100 a month for three years. Together, that builds classrooms for 130 students and a hall for 250 guests, right beside our church.</p>
-            <p class="daily">$100 a month is about $3.30 a day</p>
+      <!-- Payment form -->
+      <section class="pay-card" aria-labelledby="pay-title">
+        <p class="eyebrow">Community Center &amp; School</p>
+        <h1 id="pay-title">Make your gift</h1>
+
+        <form class="form" id="pay-form" novalidate>
+          <fieldset>
+            <legend>Frequency</legend>
+            <div class="seg">
+              <label><input type="radio" name="frequency" value="monthly" checked><span>Monthly, 3 years</span></label>
+              <label><input type="radio" name="frequency" value="one-time"><span>One-time</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Donation amount<span class="req">(required)</span></legend>
+            <div class="amounts wide" data-amounts>
+              <label><input type="radio" name="amount" value="50"><span>$50</span></label>
+              <label><input type="radio" name="amount" value="100" checked><span>$100</span></label>
+              <label><input type="radio" name="amount" value="200"><span>$200</span></label>
+              <label><input type="radio" name="amount" value="500"><span>$500</span></label>
+            </div>
+            <div class="other-row">
+              <label for="pay-other">Other amount</label>
+              <div class="money-input"><input class="input" id="pay-other" name="other" type="text" inputmode="decimal" placeholder="Amount" autocomplete="off" data-other></div>
+            </div>
+          </fieldset>
+
+          <div class="total" aria-live="polite">
+            <span class="total-label">Total donation</span>
+            <span class="total-amount" id="total-amount">$100 <small>/ month</small></span>
+            <span class="total-detail" id="total-detail">For 3 years: $3,600 in total.</span>
           </div>
-          <img src="assets/img/street.jpg" width="1195" height="896" alt="Street view rendering of the church and the new Community Center behind it">
-        </div>
-      </div>
-    </section>
 
-    <!-- Tiers -->
-    <section class="section section-alt" style="padding-top:clamp(48px,6vw,72px)">
-      <div class="wrap">
-        <div class="section-head" style="margin-bottom:36px">
-          <p class="eyebrow">Choose your monthly gift</p>
-          <h2>Every gift for three years adds up</h2>
-          <p class="lede">Monthly gifts help most: steady, predictable funding lets us plan design and construction with confidence. One-time gifts are welcome too.</p>
-        </div>
-
-        <div class="tiers">
-          <button type="button" class="tier" data-amount="50" aria-pressed="false">
-            <span class="tier-amount">$50 <small>/ month</small></span>
-            <span class="tier-total">$1,800 over 3 years</span>
-            <span class="tier-cta">Pledge $50 →</span>
-          </button>
-          <button type="button" class="tier tier-featured" data-amount="100" aria-pressed="true">
-            <span class="tier-badge">Founding Family</span>
-            <span class="tier-amount">$100 <small>/ month</small></span>
-            <span class="tier-total">$3,600 over 3 years</span>
-            <span class="tier-cta">Pledge $100 →</span>
-          </button>
-          <button type="button" class="tier" data-amount="200" aria-pressed="false">
-            <span class="tier-amount">$200 <small>/ month</small></span>
-            <span class="tier-total">$7,200 over 3 years</span>
-            <span class="tier-cta">Pledge $200 →</span>
-          </button>
-          <button type="button" class="tier" data-amount="other" aria-pressed="false">
-            <span class="tier-amount">Your <small>amount</small></span>
-            <span class="tier-total">Any monthly amount helps</span>
-            <span class="tier-cta">Choose amount →</span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Step 1: Pledge -->
-    <section class="section" id="pledge">
-      <div class="wrap">
-        <div class="step-head">
-          <span class="step-num" aria-hidden="true">1</span>
-          <div>
-            <p class="eyebrow">Step 1</p>
-            <h2>Tell us your pledge</h2>
-          </div>
-        </div>
-
-        <div class="pledge">
-          <form class="form" id="pledge-form" novalidate>
-            <div class="field-row">
-              <div class="field">
-                <label for="p-name">Full name(s)</label>
-                <input id="p-name" name="name" type="text" autocomplete="name" required>
-              </div>
-              <div class="field">
-                <label for="p-email">Email</label>
-                <input id="p-email" name="email" type="email" autocomplete="email" required>
-              </div>
+          <fieldset>
+            <legend>Payment method<span class="req">(required)</span></legend>
+            <div class="methods">
+              <label class="method"><input type="radio" name="method" value="paypal" checked> PayPal or credit/debit card</label>
+              <label class="method"><input type="radio" name="method" value="check"> Check by mail</label>
+              <label class="method"><input type="radio" name="method" value="employer"> Employer matching (Benevity)</label>
+              <label class="method"><input type="radio" name="method" value="zelle" disabled> Zelle <span class="soon">Coming soon</span></label>
             </div>
-            <div class="field-row">
-              <div class="field">
-                <label for="p-phone">Phone <span class="hint">(optional)</span></label>
-                <input id="p-phone" name="phone" type="tel" autocomplete="tel">
-              </div>
-              <div class="field">
-                <label for="p-method">I'll give by</label>
-                <select id="p-method" name="method">
-                  <option>PayPal or card (online)</option>
-                  <option>Check</option>
-                  <option>Employer match (Benevity or similar)</option>
-                  <option>Zelle, when available</option>
-                  <option>Not sure yet, please contact me</option>
-                </select>
-              </div>
-            </div>
+          </fieldset>
 
-            <fieldset>
-              <legend>My monthly pledge, for 3 years</legend>
-              <div class="chips">
-                <label class="chip"><input type="radio" name="amount" value="50"><span>$50</span></label>
-                <label class="chip"><input type="radio" name="amount" value="100" checked><span>$100 · Founding Family</span></label>
-                <label class="chip"><input type="radio" name="amount" value="200"><span>$200</span></label>
-                <label class="chip"><input type="radio" name="amount" value="other"><span>Other</span></label>
-              </div>
-              <div class="other-amount" id="other-wrap">
-                <span aria-hidden="true">$</span>
-                <input id="p-other" name="other" type="text" inputmode="decimal" aria-label="Other monthly amount in dollars" placeholder="Monthly amount">
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>Start my pledge</legend>
-              <div class="chips">
-                <label class="chip"><input type="radio" name="start" value="Now" checked><span>Now</span></label>
-                <label class="chip"><input type="radio" name="start" value="January 2027"><span>January 2027</span></label>
-              </div>
-            </fieldset>
-
-            <div class="field-row">
-              <div class="field">
-                <label for="p-onetime">One-time gift in addition <span class="hint">(optional)</span></label>
-                <input id="p-onetime" name="onetime" type="text" inputmode="decimal" placeholder="$">
-              </div>
-              <div class="field">
-                <label for="p-employer">Employer, if they match gifts <span class="hint">(optional)</span></label>
-                <input id="p-employer" name="employer" type="text" autocomplete="organization">
-              </div>
-            </div>
-
-            <fieldset>
-              <legend>Recognition</legend>
-              <div class="field">
-                <label for="p-listas" class="hint" style="font-weight:700">List us as</label>
-                <input id="p-listas" name="listas" type="text" placeholder="e.g. The Sarkissian Family">
-              </div>
-              <label class="check"><input type="checkbox" name="anonymous" id="p-anon"> Keep my gift anonymous</label>
-            </fieldset>
-
-            <p class="form-error" id="form-error" role="alert"></p>
-            <button type="submit" class="btn btn-primary">Send my pledge</button>
-            <p class="fine" style="margin-top:-6px">This opens your email app with your pledge filled in, addressed to the fundraising committee. Nothing is charged until you set up your gift in step 2.</p>
-          </form>
-
-          <aside class="pledge-aside" aria-live="polite">
-            <div class="aside-box">
-              <h3>Your pledge</h3>
-              <div class="aside-total" id="sum-total">$3,600</div>
-              <p id="sum-detail">$100 a month for 36 months</p>
-            </div>
-
-            <div class="sent" id="sent">
-              <h3>Almost done: press send in your email app</h3>
-              <p>If no email window opened, copy your pledge below and send it to <a href="mailto:armenianswa@gmail.com">armenianswa@gmail.com</a>.</p>
-              <pre id="sent-text"></pre>
-              <div class="actions">
-                <button type="button" class="btn btn-ghost" id="copy-btn">Copy pledge</button>
-                <a class="btn btn-primary" href="#ways">Next: set up your gift</a>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- Step 2: Ways to give -->
-    <section class="section section-alt" id="ways">
-      <div class="wrap">
-        <div class="step-head">
-          <span class="step-num" aria-hidden="true">2</span>
-          <div>
-            <p class="eyebrow">Step 2</p>
-            <h2>Set up your gift</h2>
-          </div>
-        </div>
-
-        <div class="ways">
-          <article class="way way-featured">
-            <div class="way-head">
-              <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div>
-              <h3>Online with PayPal or card</h3>
-              <span class="way-tag">Monthly or one-time</span>
-            </div>
-            <p>The easiest way to give every month. Use your PayPal account or a credit or debit card.</p>
+          <div class="panel show" id="panel-paypal">
             <ol>
-              <li>Click <b>Donate with PayPal</b> below.</li>
-              <li>Choose the <b>Armenian School and Community Center Fund</b>.</li>
-              <li>Enter your amount and tick <b>Make this a monthly donation</b>.</li>
+              <li>On PayPal, choose the <b>Armenian School and Community Center Fund</b>.</li>
+              <li>Enter <b data-fill="amount">$100</b>.</li>
+              <li data-show="monthly">Tick <b>Make this a monthly donation</b>.</li>
             </ol>
-            <a class="btn btn-primary" href="https://www.paypal.com/donate/?hosted_button_id=6P25MGTZ4MEZ8" target="_blank" rel="noopener" style="align-self:flex-start;margin-top:6px">
-              Donate with PayPal
+            <a class="btn btn-primary" href="https://www.paypal.com/donate/?hosted_button_id=6P25MGTZ4MEZ8" target="_blank" rel="noopener">
+              Continue to PayPal
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
             </a>
-            <p class="fine">Opens PayPal's secure donation page in a new tab.</p>
-          </article>
+          </div>
 
-          <article class="way">
-            <div class="way-head">
-              <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
-              <h3>Check by mail</h3>
-            </div>
-            <p>Make checks payable to <b style="color:var(--navy)">Armenian Apostolic Church of Seattle</b> and write <b style="color:var(--navy)">Community Center</b> in the memo line.</p>
+          <div class="panel" id="panel-check">
+            <p>Make your check for <b data-fill="amount">$100</b> payable to <b>Armenian Apostolic Church of Seattle</b> and write <b>Community Center</b> in the memo line.</p>
             <address class="address">
               Attn: Community Center and School Fund<br>
               11505 Redmond-Woodinville Rd NE<br>
               Redmond, WA 98052
             </address>
-          </article>
+            <p data-show="monthly">For a monthly gift, mail a check each month or set up recurring bill pay from your bank to this address.</p>
+          </div>
 
-          <article class="way">
-            <div class="way-head">
-              <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></div>
-              <h3>Employer matching</h3>
-              <span class="way-tag">Double your gift</span>
+          <div class="panel" id="panel-employer">
+            <ol>
+              <li>In Benevity or your company's giving portal, search for <b>Armenian Apostolic Church of Seattle Community Fund</b> (EIN 91-1189180).</li>
+              <li>Give <b data-fill="amount">$100</b><span data-show="monthly"> as a recurring monthly gift</span>.</li>
+              <li>Add <b>Community Center</b> in the comment so your gift and the match reach the project.</li>
+            </ol>
+            <a class="btn btn-primary" href="https://causes.benevity.org/causes/840-911189180" target="_blank" rel="noopener">
+              Find us on Benevity
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </div>
+
+          <p class="secure">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            <span>Online payments are processed securely by PayPal. Gifts go to the Armenian Apostolic Church of Seattle Community Fund, a 501(c)(3) nonprofit, and are tax-deductible to the extent allowed by law. EIN 91-1189180.</span>
+          </p>
+
+          <details class="register">
+            <summary>Join the Founding Families list<span>Optional. Lets the committee thank you and, if you like, list your name.</span></summary>
+            <div class="register-body">
+              <div class="field-row">
+                <div class="field">
+                  <label for="r-name">Full name(s)</label>
+                  <input id="r-name" name="name" type="text" autocomplete="name">
+                </div>
+                <div class="field">
+                  <label for="r-email">Email</label>
+                  <input id="r-email" name="email" type="email" autocomplete="email">
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field" data-show="monthly">
+                  <label for="r-start">My monthly gift starts</label>
+                  <select id="r-start" name="start">
+                    <option>Now</option>
+                    <option>January 2027</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="r-listas">List us as</label>
+                  <input id="r-listas" name="listas" type="text" placeholder="Name as you would like it shown">
+                </div>
+              </div>
+              <label class="check"><input type="checkbox" name="anonymous"> Keep my gift anonymous</label>
+              <p class="form-error" id="r-error" role="alert"></p>
+              <button type="button" class="btn btn-ghost" id="r-send">Email my pledge</button>
+              <div class="sent" id="r-sent">
+                <p><b>Press send in your email app.</b> If nothing opened, copy this and send it to <a href="mailto:armenianswa@gmail.com">armenianswa@gmail.com</a>.</p>
+                <pre id="r-text"></pre>
+                <button type="button" class="btn btn-ghost" id="r-copy">Copy pledge</button>
+              </div>
             </div>
-            <p>In Benevity or your company's giving portal, search for <b style="color:var(--navy)">Armenian Apostolic Church of Seattle Community Fund</b> (EIN 91-1189180). Add <b style="color:var(--navy)">Community Center</b> in the comment so your gift and the match reach the project.</p>
-            <a class="card-link" href="https://causes.benevity.org/causes/840-911189180" target="_blank" rel="noopener" style="font-weight:800">Find us on Benevity →</a>
-          </article>
+          </details>
+        </form>
+      </section>
 
-          <article class="way ways-soon">
-            <div class="way-head">
-              <h3>Zelle and Venmo</h3>
-              <span class="way-tag">Coming soon</span>
-            </div>
-            <p>We're setting up a dedicated Zelle account for the project. Prefer to give this way? Pick Zelle on the pledge form and we'll send you the details as soon as it's ready.</p>
-          </article>
+      <!-- Side panel -->
+      <aside class="pay-side">
+        <img src="assets/img/street.jpg" width="1195" height="896" alt="Street view rendering of the church with the new Community Center beside it">
+        <h2 class="side-title">Armenian Community Center &amp; School</h2>
+        <div class="side-box">
+          <p>Your gift builds a permanent home for our community, right beside our church in Redmond:</p>
+          <ul class="ticks">
+            <li><b>Classrooms</b> for 130 students</li>
+            <li><b>A 250-guest hall</b> with a stage and dance floor</li>
+            <li><b>A commercial kitchen</b> for every celebration</li>
+            <li><b>About 60 new</b> parking spaces</li>
+          </ul>
         </div>
-      </div>
-    </section>
+        <div class="side-goal">
+          <span class="eyebrow">Our goal</span>
+          <strong>200 Founding Families</strong>
+          <span>$100 a month for 3 years</span>
+        </div>
+        <p class="fine">Questions? <a href="mailto:armenianswa@gmail.com">armenianswa@gmail.com</a> · <a href="./">About the project</a></p>
+      </aside>
 
-    <!-- FAQ -->
-    <section class="section" id="faq">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Questions</p>
-          <h2>Before you give</h2>
-        </div>
-        <div class="faq">
-          <details>
-            <summary>Is my gift tax-deductible?</summary>
-            <p>Yes, to the extent allowed by law. Gifts are made to the Armenian Apostolic Church of Seattle Community Fund, a 501(c)(3) nonprofit, EIN 91-1189180.</p>
-          </details>
-          <details>
-            <summary>Why monthly, and why three years?</summary>
-            <p>Steady monthly gifts give the project predictable funding for planning, permits and construction. Three years covers design, building and opening. After that, rental income from the hall, kitchen and classrooms is planned to keep the center self-supporting.</p>
-          </details>
-          <details>
-            <summary>Can I start my pledge later?</summary>
-            <p>Yes. Choose January 2027 on the pledge form and we'll follow up when it's time to begin.</p>
-          </details>
-          <details>
-            <summary>Can I make a one-time gift instead?</summary>
-            <p>Absolutely. Use PayPal or mail a check for any amount, or add a one-time gift on top of your monthly pledge.</p>
-          </details>
-          <details>
-            <summary>How will I know where the money goes?</summary>
-            <p>We publish what has been raised and spent on our <a href="./#transparency">home page</a>, as reported by the project treasurer, and update it as the project moves forward.</p>
-          </details>
-          <details>
-            <summary>Who do I ask if I have questions?</summary>
-            <p>Email the fundraising committee at <a href="mailto:armenianswa@gmail.com">armenianswa@gmail.com</a>. We're happy to help.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
+    </div>
   </main>
 
   <footer class="site-footer">
